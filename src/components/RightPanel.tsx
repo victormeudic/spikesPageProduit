@@ -57,7 +57,7 @@ export default function RightPanel() {
           alt=""
         />
       </motion.div>
-      <ChairLists />
+      <ChairLists counter={counter} />
     </div>
   );
 }
