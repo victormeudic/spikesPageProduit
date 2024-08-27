@@ -1,7 +1,7 @@
-import AddButton from "../subcomponents/AddButton";
-import Counter from "../subcomponents/Counter";
+import { Toaster } from "sonner";
 import ProductDescription from "../subcomponents/ProductDescription";
 import Selection from "./Selection";
+import AddArticle from "./AddArticle";
 
 export default function LeftPannel() {
   return (
@@ -15,8 +15,7 @@ export default function LeftPannel() {
       <ProductDescription />
       <Selection />
       <div className="flex gap-6">
-        <Counter />
-        <AddButton />
+        <AddArticle />
       </div>
       <p className="text-base font-normal mt-8">
         Free 3-5 day shipping • Tool-free assembly • 30-day trial
@@ -33,6 +32,7 @@ export default function LeftPannel() {
           <img className="w-4" src="/assets/instagram.svg" alt="" />
         </div>
       </div>
+      <Toaster position="bottom-center" />
     </div>
   );
 }

@@ -1,16 +1,17 @@
-import { useState } from "react";
+interface CounterProps {
+  counter: number;
+  setCounter: React.Dispatch<React.SetStateAction<number>>;
+}
 
-export default function Counter() {
-  const [counter, setCounter] = useState(1);
-
+export default function Counter({ counter, setCounter }: CounterProps) {
   const handleClickMinus = () => {
     if (counter > 1) {
-      setCounter((counter) => counter - 1);
+      setCounter((c: number) => c - 1);
     }
   };
 
   const handleClickPLus = () => {
-    setCounter((counter) => counter + 1);
+    setCounter((c: number) => c + 1);
   };
 
   return (
