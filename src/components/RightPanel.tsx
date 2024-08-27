@@ -30,16 +30,20 @@ export default function RightPanel() {
           <p className="font-semibold text-2xl text-cool-grey">05</p>
         </div>
         <div className="flex justify-end gap-20 mt-6">
-          <img
-            src="/assets/chevron-left.svg"
-            alt=""
-            onClick={handleClickMinus}
-          />
-          <img
-            src="/assets/chevron-right.svg"
-            alt=""
-            onClick={handleClickPlus}
-          />
+          <div className="p-1 hover:bg-[#f1f5f9] hover:rounded transition-colors">
+            <img
+              src="/assets/chevron-left.svg"
+              alt=""
+              onClick={handleClickMinus}
+            />
+          </div>
+          <div className="p-1 hover:bg-[#f1f5f9] hover:rounded transition-colors">
+            <img
+              src="/assets/chevron-right.svg"
+              alt=""
+              onClick={handleClickPlus}
+            />
+          </div>
         </div>
       </div>
 
