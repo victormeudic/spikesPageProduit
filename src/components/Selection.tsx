@@ -12,7 +12,8 @@ export default function Selection() {
       {colors.map((color, index) => (
         <div
           key={index}
-          className={`w-5 h-5 inline-flex justify-center rounded-full items-center bg-[${color}]`}
+          className={`w-5 h-5 inline-flex justify-center rounded-full items-center`}
+          style={{ backgroundColor: color }}
           onClick={() => handleClick(index)}
         >
           {selected === index && (

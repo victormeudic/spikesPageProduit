@@ -1,7 +1,7 @@
 export default function NavBar() {
   return (
     <div className="flex w-screen justify-between border-b border-french-grey">
-      <div className="flex justify-between w-[1335px] items-center py-7 px-10 border-r">
+      <div className="flex justify-between w-[1335px] items-center py-6 px-10 border-r">
         <img src="/assets/logo.svg" alt="" />
         <ul className="flex gap-10 uppercase text-sm font-semibold">
           <li>Shop</li>
