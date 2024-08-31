@@ -8,7 +8,7 @@ export default function AddArticle() {
   return (
     <div className="flex gap-6">
       <Counter counter={counter} setCounter={setCounter} />
-      <AddButton counter={counter} />
+      <AddButton counter={counter} setCounter={setCounter} />
     </div>
   );
 }
