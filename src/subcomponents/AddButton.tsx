@@ -1,3 +1,5 @@
+import { ArticleContext } from "@/context/ArticleContext";
+import { useContext } from "react";
 import { toast } from "sonner";
 
 interface AddButtonProps {
@@ -5,10 +7,14 @@ interface AddButtonProps {
 }
 
 export default function AddButton({ counter }: AddButtonProps) {
-  const handleAddArticle = () =>
+  const { setNumberOfArticles } = useContext(ArticleContext);
+
+  const handleAddArticle = () => (
+    setNumberOfArticles((c: number) => c + counter),
     toast("New article add to your shopping cart", {
       description: `Meryl Lounge Chair : ${counter} x $149.99`,
-    });
+    })
+  );
 
   return (
     <button

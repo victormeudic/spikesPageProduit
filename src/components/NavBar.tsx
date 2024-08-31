@@ -1,4 +1,9 @@
+import { ArticleContext } from "@/context/ArticleContext";
+import { useContext } from "react";
+
 export default function NavBar() {
+  const { numberOfArticles } = useContext(ArticleContext);
+
   return (
     <div className="flex w-screen justify-between border-b border-french-grey">
       <div className="flex justify-between w-[1335px] items-center py-6 px-10 border-r">
@@ -17,6 +22,7 @@ export default function NavBar() {
       </div>
       <div className="px-10 py-7 items-center flex">
         <img src="/assets/shopping-cart.svg" alt="" />
+        <div>{numberOfArticles}</div>
       </div>
     </div>
   );
